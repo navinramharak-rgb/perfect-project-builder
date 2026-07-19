@@ -1,3 +1,5 @@
+![Perfect Project Builder](banner.png)
+
 # Perfect Project Builder
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)
