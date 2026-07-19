@@ -1,0 +1,19 @@
+{
+  "name": "perfect-project-builder",
+  "version": "0.1.0",
+  "description": "Turn any recurring workflow into a complete, paste-ready Claude Project: Project Instructions, a five-document knowledge stack with fill-in templates, starter prompts, and a pressure test.",
+  "author": {
+    "name": "Build With Nav"
+  },
+  "homepage": "https://buildwithnav.com",
+  "license": "MIT",
+  "keywords": [
+    "claude-projects",
+    "project-instructions",
+    "knowledge-base",
+    "prompt-engineering",
+    "workflow",
+    "content-creation",
+    "productivity"
+  ]
+}

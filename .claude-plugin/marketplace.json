@@ -1,0 +1,14 @@
+{
+  "name": "build-with-nav",
+  "owner": {
+    "name": "Navin Ramharak (Build With Nav)"
+  },
+  "plugins": [
+    {
+      "name": "perfect-project-builder",
+      "source": "./",
+      "description": "Turn any recurring workflow into a complete, paste-ready Claude Project.",
+      "category": "productivity"
+    }
+  ]
+}
