@@ -16,7 +16,7 @@ Use this rule without exception:
 Why the split matters:
 
 - **Instructions apply to every conversation in the project.** They are the permanent system prompt. Anything long, changeable, or example-heavy inflates every single chat.
-- **Knowledge is retrieved when relevant.** On paid plans, large knowledge bases use retrieval (RAG) — Claude pulls the most relevant documents per query. A fact buried inside an unrelated mega-document may never be retrieved. One topic per document, descriptive file names.
+- **Knowledge is retrieved when relevant.** Once a knowledge base grows past the context window, Claude automatically switches on retrieval and pulls the most relevant documents per query. A fact buried inside an unrelated mega-document may never be retrieved. One topic per document, descriptive file names.
 - **Facts change; behavior doesn't.** Prices, offers, links, and claims belong in a source-of-truth document with a last-updated date, so updating them never means rewriting the Instructions.
 
 ## Operating rules for writing Instructions

@@ -48,7 +48,12 @@ The rule, without exception: role, workflow, output format, tone rules, quality 
 
 Use the smallest stack that gives Claude enough evidence — the five-document core in `references/context-blueprints.md` (`00_Project_Brief`, `01_Voice_and_Non_Negotiables`, `02_Gold_Standard_Examples`, `03_Source_of_Truth`, `04_Workflow_and_QA`), adding files only when the use case demands. Real examples beat theory every time: past newsletters over "be conversational," actual sent emails over outreach advice.
 
-Know the current platform facts and design for them: projects are available on all plans (free accounts cap at five projects); paid plans get RAG that auto-expands knowledge capacity roughly 10x when it outgrows the context window, retrieving the most relevant content per query; projects can generate an editable memory from conversations; Team/Enterprise plans can share projects with view or edit permissions. Because retrieval is per-query on large knowledge bases, keep each document focused on one topic with a descriptive name — that's what makes retrieval find it.
+### Platform facts that change how you build
+
+- **Claude cannot see the project name or description.** Those fields are for humans browsing the project list. Every instruction and every fact has to live in the Instructions field or in an uploaded document. This is the most common first-timer mistake: writing the brief into the description and wondering why Claude ignores it.
+- **Knowledge is retrieved per query on large knowledge bases.** When project knowledge approaches the context window, Claude automatically switches on retrieval, expanding capacity by up to 10x and pulling only the most relevant content for each question. It turns on by itself and cannot be toggled manually. The practical consequence: keep every document focused on one topic with a descriptive file name, because that is what makes retrieval find it. A fact buried in an unrelated mega-document may never surface.
+- **Uploads have real limits.** Project files cap at 30MB each, well below the chat upload limit. Claude extracts text only, except for PDFs. PDFs cap at 1000 pages, and visual elements are analyzed only in PDFs of 100 pages or fewer. So a scanned or image-heavy document is close to useless as project knowledge. Convert it to text first, or paste the parts that matter into a markdown file.
+- **Projects are available on all plans**, with free accounts capped at five projects. Projects also keep their own memory space and can generate an editable summary from conversations. Team and Enterprise plans can share a project with view or edit permissions.
 
 ## 5. Write the Instructions
 

@@ -3,7 +3,7 @@
 # Perfect Project Builder
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-orange.svg)
-![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)
+![Version](https://img.shields.io/badge/version-0.1.1-blue.svg)
 ![Beginner friendly](https://img.shields.io/badge/beginner-friendly-brightgreen.svg)
 
 Turn any recurring workflow into a complete, paste-ready Claude Project. This plugin packages a proven build methodology into a skill your assistant can run: a strict split between Instructions and knowledge, a five-document context stack with fill-in templates, paste-ready Project Instructions, starter prompts, and a pressure test that proves the project works before you rely on it.
