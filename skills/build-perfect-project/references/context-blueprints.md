@@ -1,13 +1,13 @@
 # Context-Document Blueprints
 
-The five-document core stack, with the exact structure for each file. Use the smallest stack that gives Claude enough evidence to work — don't upload everything the user owns. Fill-in versions of all five live in `assets/starter-kit/` and can be generated as real files for the user.
+The five-document core stack, with the exact structure for each file. Use the smallest stack that gives Claude enough evidence to work. Don't upload everything the user owns. Fill-in versions of all five live in `assets/starter-kit/` and can be generated as real files for the user.
 
-Numbered, descriptive file names keep the knowledge base easy to maintain and easy for retrieval to find. One topic per document. When a fact goes stale, replace it in `03_Source_of_Truth.md` — never leave conflicting versions scattered across five documents.
+Numbered, descriptive file names keep the knowledge base easy to maintain and easy for retrieval to find. One topic per document. When a fact goes stale, replace it in `03_Source_of_Truth.md`, never in five places at once. Conflicting versions are worse than a missing fact.
 
-## `00_Project_Brief.md` — the job, locked
+## `00_Project_Brief.md`: the job, locked
 
 ```markdown
-# [Project Name] — Project Brief
+# [Project Name]: Project Brief
 
 ## The job
 [One sentence describing the recurring job.]
@@ -29,13 +29,13 @@ Numbered, descriptive file names keep the knowledge base easy to maintain and ea
 [Deadlines, approvals, platform rules, compliance rules, required tools.]
 ```
 
-## `01_Voice_and_Non_Negotiables.md` — sound like the user, never generic
+## `01_Voice_and_Non_Negotiables.md`: sound like the user, never generic
 
 ```markdown
 # Voice and Non-Negotiables
 
 ## Voice in one sentence
-[Example: Direct, conversational, and specific — like a founder explaining the shortcut to a smart friend.]
+[Example: Direct, conversational, and specific, like a founder explaining the shortcut to a smart friend.]
 
 ## Do this
 | Trait | What it means | Real example |
@@ -54,12 +54,12 @@ Numbered, descriptive file names keep the knowledge base easy to maintain and ea
 
 The before/after table is the highest-value part. Pull the "real example" sentences from actual approved work, not invented ones.
 
-## `02_Gold_Standard_Examples.md` — proof of what good looks like
+## `02_Gold_Standard_Examples.md`: proof of what good looks like
 
 ```markdown
 # Gold-Standard Examples
 
-## Example 1 — [Name]
+## Example 1: [Name]
 ### Original input
 [The rough brief, transcript, or raw material.]
 
@@ -74,9 +74,27 @@ The before/after table is the highest-value part. Pull the "real example" senten
 [What was context-specific.]
 ```
 
-Include three to ten real examples. Quality beats quantity. The input→output pairing is what teaches the transformation — an output alone teaches style but not process. Remove private information only where necessary.
+### When they have no examples yet
 
-## `03_Source_of_Truth.md` — facts that must be accurate
+Never invent examples to fill this file. Fabricated work teaches Claude a voice the person does not have, and they will not be able to tell you why the output feels off.
+
+If the ladder in `interview-guide.md` produced nothing, ship the file with this header so the gap is visible every time anyone opens it:
+
+```markdown
+# Gold-Standard Examples
+
+> **This file is intentionally empty.** The project works without it, but the outputs
+> will read more generic than they should until there are real examples in here.
+> This is the one thing that will improve the output most.
+>
+> **Fill this in by: [date, two weeks out]**
+> Fastest way: save the next three you make. Paste the best one in below, with one
+> line on why it worked.
+```
+
+Include three to ten real examples. Quality beats quantity. The input to output pairing is what teaches the transformation. An output on its own teaches style but not process. Remove private information only where necessary.
+
+## `03_Source_of_Truth.md`: facts that must be accurate
 
 ```markdown
 # Source of Truth
@@ -96,7 +114,7 @@ Include three to ten real examples. Quality beats quantity. The input→output p
 
 The "Never assume" list is the guardrail most projects skip and most need.
 
-## `04_Workflow_and_QA.md` — the repeatable process and review rubric
+## `04_Workflow_and_QA.md`: the repeatable process and review rubric
 
 ```markdown
 # Workflow and Quality Control
@@ -124,3 +142,26 @@ Add beyond the core five only when the use case demands it, one topic per file. 
 ## The improvement loop
 
 The knowledge base is alive. After each strong output, add it to `02_Gold_Standard_Examples.md` with a note on why it worked. After each correction the user makes repeatedly, encode it as a rule in `01_Voice_and_Non_Negotiables.md` or the Instructions. A project that never updates its examples plateaus at its launch quality.
+
+## How these files get delivered
+
+Do not hand over five loose files and hope. Deliver a numbered folder so the order of operations is built into the names:
+
+```
+[Project Name] Claude Project/
+  START-HERE.md                        personalized setup guide
+  1-PASTE-THIS/
+    project-instructions.md            goes in the Instructions box
+  2-UPLOAD-THESE/
+    00_Project_Brief.md                every file in here gets uploaded
+    01_Voice_and_Non_Negotiables.md
+    02_Gold_Standard_Examples.md
+    03_Source_of_Truth.md
+    04_Workflow_and_QA.md
+  3-TRY-THESE/
+    starter-prompts.md
+```
+
+Folder 1 gets pasted. Folder 2 gets uploaded. Folder 3 is what they type first. Beginners confuse pasting and uploading constantly, and these folder names do that teaching without you having to repeat it.
+
+In a plain chat with no file tools, keep the same names and deliver each document as its own copy-paste block, with a line at the top of each saying what to name it and whether it is pasted or uploaded.

@@ -1,85 +1,105 @@
 ---
 name: build-perfect-project
-description: Turn any recurring workflow into a complete, paste-ready Claude Project — Project Instructions, a context-document plan with fill-in templates, starter prompts, and a pressure test. Use when someone wants to "set up a Claude Project", "build a project for X", needs Project Instructions or a knowledge-base plan, wants a repeatable system for content creation, newsletters, outreach, research, proposals, or support, keeps re-pasting the same context into every chat, or asks "how should I structure my Claude Project".
+description: Interview a first-time builder and walk them all the way to a working Claude Project: questions, real files, setup, and a tested first output. Use when someone wants to "set up a Claude Project", "build a project for X", needs Project Instructions or a knowledge base, keeps re-pasting the same context into every chat, says they do not know where to start with Claude or how to set it up for their business, or asks how to structure a Claude Project for content, newsletters, social posts, outreach, proposals, research, client work, or customer support.
 ---
 
 # Build a Perfect Claude Project
 
-Build Claude Projects that do one recurring job well. Never build a vague "AI assistant for my business." Build a focused system with clear behavior, real context, and an output the user can ship.
+Assume the person has never built one and does not know what a Project, an Instructions field, or a knowledge base is. Do not hand them a plan and wish them luck. Interview them, build the files for them, then walk them through setup step by step and test it with them before you let them go.
 
-> **Core principle:** Instructions tell Claude **how to behave**. Context documents give Claude the **proof, examples, facts, and source material** to do the job. Never bury both jobs in one giant document.
+> **Core principle:** Instructions tell Claude **how to behave**. Knowledge documents give Claude the **proof, examples, facts, and source material** to do the job. Never bury both jobs in one giant document.
 
-Write in a direct, practical voice — like a smart operator explaining exactly what to do next, not a corporate consultant.
+**The promise you are keeping:** they finish this conversation with a project that works today, not a to-do list.
 
-Reach for the references as needed (progressive disclosure). Do not paste their full contents into responses unless the task needs it:
-- `references/instructions-playbook.md`: the instructions-vs-knowledge split, the paste-ready Instructions template, and the operating rules for writing them.
-- `references/context-blueprints.md`: the five-document context stack with full blueprints for each file.
+## How to talk to a beginner
+
+This matters more than any template here. Get it wrong and they quit in round two.
+
+- **One round of questions at a time.** Three to five questions, then stop and wait. Never dump twenty questions.
+- **Say why you are asking** before each round, in one line.
+- **Never use a term without defining it once.** Project, Instructions, knowledge, retrieval. Define on first use, in plain words, then move on.
+- **Ask for concrete things, not categories.** "What did you make last week that you will have to make again?" beats "what is your recurring workflow?"
+- **Accept messy answers.** Reflect back what you heard, fill the rest with a labeled assumption, say so, and keep moving. Do not re-ask.
+- **Give them the win early and often.** After every round, say what you now have and what is left.
+- **Never end a phase with "let me know if you want more."** Tell them the exact next thing to do.
+
+Write in a direct, practical voice. No corporate tone, no em dashes, no filler.
+
+Read the references as you reach each phase. Do not paste their contents into responses:
+- `references/interview-guide.md`: Phases 1 to 4. The question rounds word for word, handling vague answers, and getting examples out of someone with no files.
+- `references/context-blueprints.md`: Phase 5. The knowledge documents, fully specified, plus the delivered folder structure.
+- `references/instructions-playbook.md`: Phase 5. The instructions-vs-knowledge split and the paste-ready Instructions template.
+- `references/setup-walkthrough.md`: Phases 6 and 7. The step-by-step setup script, troubleshooting, and the diagnosis table.
 - `references/patterns-and-example.md`: use-case patterns and one fully worked example at the required level of specificity.
 
-Fill-in template files live in `assets/starter-kit/`. When working in an environment with file access, offer to generate the context documents as real files the user can upload straight into their project — not just a plan describing them.
+Templates live in `assets/starter-kit/`.
 
-## 0. Gate: should this even be a project?
+## Phase 0. Orient and gate
 
-Run this check before building anything:
+Open with what they are about to get and how long it takes. Be honest about the shape of it: about twenty minutes of questions, plus however long it takes them to go dig up a few real examples, and they will have a working project at the end.
 
-- **Same workflow, same standards, recurring weekly or daily** → build one focused project.
-- **One-off task** → don't build a project. Write the user one strong reusable prompt instead.
-- **The work is a multi-step procedure Claude should execute** (not a workspace with context) → suggest a skill, not a project.
-- **"One project for everything"** → refuse politely. Break it into the 1–3 recurring workflows with the most leverage and build the first one.
-- **Shared voice, different audiences or facts** → separate projects, or one shared brand-context document reused across focused projects.
+Then run the gate:
 
-## 1. Collect only what changes the build
+- **Same job, same standards, recurring weekly or daily** → build one focused project.
+- **One-off task** → do not build a project. Write them one strong reusable prompt instead and say why.
+- **A multi-step procedure Claude should execute** rather than a workspace with context → a skill fits better. Say it in one line: a project is what Claude knows, a skill is how Claude does something.
+- **"One project for everything"** → say no, kindly, and explain the cost: a project that does everything sounds like nothing. Name the one or two recurring jobs that eat the most of their time and build the first one today. Tell them the second one can come later.
+- **Shared voice, different audiences** → separate projects, or one shared brand document reused across focused projects.
 
-Start with what the user already gave. If the brief is clear enough, state reasonable assumptions and build. If critical information is missing, ask only the smallest set of questions that changes the build — never more than five at once.
+## Phases 1 to 4. The interview
 
-What matters: the recurring job, the finished output and who it's for, what the user will supply each time, real examples of "good" (past work, transcripts, approved outputs), voice and hard rules, and constraints (approvals, compliance, formats, deadlines).
+Four rounds, each ending in a checkpoint. Run them from `references/interview-guide.md`, which has the exact wording.
 
-## 2. Define the job in one sentence
+1. **The job.** What they repeat, who receives it, what they start with, what they hate. Ends with the one-sentence job written back and confirmed.
+2. **The material.** Send them to find real examples, with a specific list and specific places to look. This round decides whether the project is good or generic. Do not skip it or soften it. When they come back with nothing, work the three-step ladder in the interview guide: talk the examples out of them and write them up, then reconstruct from adjacent material, then as a last resort build anyway with the gap flagged and dated. Never invent examples.
+3. **Voice and hard rules.** What sounds like them, what makes them cringe, what they cannot say, what must appear every time.
+4. **Facts and approvals.** What must be right every time, what Claude must never guess, who signs off, what goes stale.
 
-> "This project helps **[person]** turn **[input]** into **[specific output]** for **[audience]**, while following **[core standards]**."
+Stop interviewing after Round 4. If something is still missing, write it into `03_Source_of_Truth.md` under "Never assume" and build.
 
-If this sentence is fuzzy, the project will be fuzzy. Tighten it before anything else. Then map the operating loop: trigger → inputs → Claude's work → human review → final output → best outputs added back to project knowledge as new examples.
+## Phase 5. Build the files
 
-## 3. Split instructions from knowledge
+Deliver a numbered folder. The structure and the naming rules are in `references/context-blueprints.md`; follow them exactly, because the folder names are what teach paste-versus-upload.
 
-The rule, without exception: role, workflow, output format, tone rules, quality checks, and exclusions go in **Project Instructions**. Approved facts, real examples, past outputs, transcripts, offers, policies, and templates go in **context documents**. "Write in a direct voice" is an instruction; five past captions that demonstrate the voice are knowledge. Full playbook: `references/instructions-playbook.md`.
+Four things that folder must contain, none of which are optional:
 
-## 4. Build the context stack
+1. **`1-PASTE-THIS/project-instructions.md`** from the template in `references/instructions-playbook.md`. Every bracket filled. Paste-ready with zero editing.
+2. **`2-UPLOAD-THESE/`** with the knowledge documents from `references/context-blueprints.md`. Five for a standard build, plus a sixth topic file only when the use case genuinely needs one.
+3. **`3-TRY-THESE/starter-prompts.md`** with exactly three prompts, in this order: **prompt 1 is the pressure test**, the standard run they will type first; prompt 2 works from a supplied reference or a hard edge case; prompt 3 asks the project to review a draft against its own rules. Prompt 1 is the one Phase 7 tests, so it has to be the realistic everyday job.
+4. **`START-HERE.md`**, built from `assets/starter-kit/START-HERE-template.md` and personalized. It carries the project snapshot, the two paste-versus-upload warnings, the build steps, the pressure test with its pass criteria, the improvement loop, and any flagged gap with its due date. Copy `Setup_Checklist.md` in alongside it.
 
-Use the smallest stack that gives Claude enough evidence — the five-document core in `references/context-blueprints.md` (`00_Project_Brief`, `01_Voice_and_Non_Negotiables`, `02_Gold_Standard_Examples`, `03_Source_of_Truth`, `04_Workflow_and_QA`), adding files only when the use case demands. Real examples beat theory every time: past newsletters over "be conversational," actual sent emails over outreach advice.
+**Where it goes.** Write the folder into the user's connected or working folder, named `[Project Name] Claude Project`, then send the files to them so they can actually open them. A folder they cannot see is the same as no folder.
 
-### Platform facts that change how you build
+**In plain chat with no file tools:** same names, same structure, delivered as separate copy-paste blocks, each with a line at the top saying what to name it and whether it gets pasted or uploaded.
+
+Nothing ships with an unfilled bracket in it.
+
+## Phase 6. Set it up with them
+
+Run Steps 1 to 6 of `references/setup-walkthrough.md`, one at a time, waiting for a "done" or a "stuck" before the next one. Do not paste all the steps at once.
+
+Say both beginner traps out loud before they start, not after they hit one: the Instructions get pasted into the Instructions box and never uploaded, and Claude cannot see the project name or description.
+
+## Phase 7. Test it, then set the first week
+
+Do not declare it done. Prove it.
+
+Steps 7 and 8 of the walkthrough: they run prompt 1 in the new project and paste the result back to you. Read it and diagnose against the table in `references/setup-walkthrough.md`, then say plainly which of those it is. A beginner cannot tell a thin knowledge base from a broken project, and if you do not name it they will assume the whole thing does not work.
+
+Close with the improvement loop and a date for anything you flagged as missing. Both are already written in their `START-HERE.md`, so keep it to three lines here.
+
+## Platform facts that change how you build
 
 - **Claude cannot see the project name or description.** Those fields are for humans browsing the project list. Every instruction and every fact has to live in the Instructions field or in an uploaded document. This is the most common first-timer mistake: writing the brief into the description and wondering why Claude ignores it.
-- **Knowledge is retrieved per query on large knowledge bases.** When project knowledge approaches the context window, Claude automatically switches on retrieval, expanding capacity by up to 10x and pulling only the most relevant content for each question. It turns on by itself and cannot be toggled manually. The practical consequence: keep every document focused on one topic with a descriptive file name, because that is what makes retrieval find it. A fact buried in an unrelated mega-document may never surface.
-- **Uploads have real limits.** Project files cap at 30MB each, well below the chat upload limit. Claude extracts text only, except for PDFs. PDFs cap at 1000 pages, and visual elements are analyzed only in PDFs of 100 pages or fewer. So a scanned or image-heavy document is close to useless as project knowledge. Convert it to text first, or paste the parts that matter into a markdown file.
-- **Projects are available on all plans**, with free accounts capped at five projects. Projects also keep their own memory space and can generate an editable summary from conversations. Team and Enterprise plans can share a project with view or edit permissions.
-
-## 5. Write the Instructions
-
-Use the template in `references/instructions-playbook.md`. Instructions are an operating system, not an essay: role and outcome, operating workflow, voice and standards, exact output format, a what-not-to-do list, and a final quality check. The result must be paste-ready — one fenced block the user copies without editing. Every project gets a **What Not To Do** section; a project without exclusions drifts into generic AI output.
-
-## 6. Starter prompts and pressure test
-
-Give three to five copy-paste starter prompts: one standard run, one revision, one hard edge case. Then create one realistic test prompt and state what a good answer must include. If the project can't pass with the supplied documents, name the missing context before declaring it done.
-
-## 7. Deliver the full setup
-
-Return **all** sections, in order — never a partial plan:
-
-1. **Project Snapshot** — name, one-line job, best for, primary output, inputs needed each time, human approval point.
-2. **Project Instructions** — complete, in one fenced block.
-3. **Context documents to create** — table of file, purpose, exact contents, structure. Offer to generate them as real files from `assets/starter-kit/`.
-4. **Build order** — from "collect examples" to "test the project," followable by a non-technical user.
-5. **Starter prompts.**
-6. **Pressure test** — prompt, success criteria, what to add if it fails.
-7. **What not to do** — project-specific failure modes, not generic warnings.
+- **Knowledge is retrieved per query on large knowledge bases.** When project knowledge approaches the context window, Claude automatically switches on retrieval, expanding capacity by up to 10x and pulling only the most relevant content for each question. It turns on by itself and cannot be toggled. So keep every document focused on one topic with a descriptive file name, because that is what makes retrieval find it. A fact buried in an unrelated mega-document may never surface.
+- **Uploads have real limits.** Project files have a size cap, currently 30MB each, well below the chat upload limit. Claude extracts text only, except for PDFs, which cap at 1000 pages with visual elements analyzed only under 100 pages. A scan or a screenshot is close to useless as project knowledge. Convert it to text, or paste the parts that matter into a markdown file.
+- **Projects are available on all plans**, and free plans cap how many you can have. Projects keep their own memory space and can generate an editable summary from conversations. Team and Enterprise plans can share a project with view or edit permissions.
 
 ## Non-negotiables
 
-- One focused recurring job per project. No "assistant for everything."
-- Instructions are paste-ready. No placeholders left unfilled, no "adapt as needed."
-- Every recommended context document names real material to put in it.
+- Interview before building. Never generate a project from a one-line request without asking anything.
+- One focused recurring job per project. No assistant for everything.
+- Every document contains real material or is clearly marked empty with a date to fix it. Never invent examples, results, quotes, or links.
+- Instructions are paste-ready. No unfilled brackets, no "adapt as needed."
 - Voice guidance plus a What Not To Do section, always.
-- Missing facts become questions or labeled assumptions — never invented instructions.
-- Do not end with "let me know if you want more." The job is to make the project usable now.
+- The job is not done when the files exist. It is done when they have tested it and you have read the result.

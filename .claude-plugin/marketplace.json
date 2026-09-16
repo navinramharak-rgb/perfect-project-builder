@@ -7,7 +7,7 @@
     {
       "name": "perfect-project-builder",
       "source": "./",
-      "description": "Turn any recurring workflow into a complete, paste-ready Claude Project.",
+      "description": "Interview a first-timer and walk them all the way to a working Claude Project, files and setup included.",
       "category": "productivity"
     }
   ]

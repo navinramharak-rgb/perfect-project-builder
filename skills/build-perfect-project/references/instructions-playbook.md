@@ -28,6 +28,10 @@ Why the split matters:
 5. **Point at the knowledge.** Tell Claude which documents to consult for which decisions ("Match the format in the gold-standard examples"; "Only state facts present in the Source of Truth").
 6. **Don't automate ambiguity.** If the human workflow is unclear, map it first. A project should support a real workflow, not hide a broken one.
 
+## Where the Instructions actually go
+
+Say this out loud to a first-timer before handing anything over: the Instructions are **pasted into the Instructions box inside the project**. They are not uploaded as a knowledge file. Upload them by mistake and they stop being rules Claude always follows and become a document Claude might look at, which is why a project can appear to ignore its own instructions. This is the most common setup failure by a wide margin.
+
 ## The paste-ready Instructions template
 
 Fill every bracket. The final version must paste into the Project Instructions field with zero editing.
@@ -71,3 +75,4 @@ Confirm the output is [check 1], [check 2], and [check 3]. If it is not, fix it 
 - They exceed roughly a page → something belongs in knowledge instead.
 - They have no exclusions → the outputs will sound like every other AI.
 - The user must edit them before pasting → the build isn't done.
+- They were uploaded as a file instead of pasted into the box → not a writing problem, a setup problem. Fix it in the walkthrough.

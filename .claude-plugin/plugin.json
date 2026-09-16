@@ -1,7 +1,7 @@
 {
   "name": "perfect-project-builder",
-  "version": "0.1.1",
-  "description": "Turn any recurring workflow into a complete, paste-ready Claude Project: Project Instructions, a five-document knowledge stack with fill-in templates, starter prompts, and a pressure test.",
+  "version": "0.2.0",
+  "description": "Interview a first-time builder and walk them all the way to a working Claude Project: four rounds of questions, real files in a numbered folder, click-by-click setup, and a tested first output.",
   "author": {
     "name": "Build With Nav"
   },
@@ -11,9 +11,10 @@
     "claude-projects",
     "project-instructions",
     "knowledge-base",
+    "onboarding",
+    "beginner",
     "prompt-engineering",
     "workflow",
-    "content-creation",
     "productivity"
   ]
 }

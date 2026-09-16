@@ -1,7 +1,7 @@
 # Voice and Non-Negotiables
 
 ## Voice in one sentence
-[Example: Direct, conversational, and specific — like a founder explaining the shortcut to a smart friend.]
+[Example: Direct, conversational, and specific, like a founder explaining the shortcut to a smart friend.]
 
 ## Do this
 | Trait | What it means | Real example from approved work |

@@ -1,4 +1,4 @@
-# [Project Name] — Project Brief
+# [Project Name]: Project Brief
 
 ## The job
 [One sentence: this project turns X into Y for Z.]

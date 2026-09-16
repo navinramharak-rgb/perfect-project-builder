@@ -15,7 +15,7 @@ Use these to move faster. Adapt them; never copy them blindly.
 
 ## Fully worked example: Short-Form Content Engine
 
-This is the required level of specificity for every build. A creator who teaches business owners practical AI publishes three Reels a week and wants each raw idea turned into a filmable package.
+This is the required level of specificity for every build. The seven numbered parts below are what goes *into* the delivered folder: part 2 becomes `1-PASTE-THIS/project-instructions.md`, part 3 becomes the files in `2-UPLOAD-THESE/`, part 5 becomes `3-TRY-THESE/starter-prompts.md`, and parts 1, 4, 6 and 7 become `START-HERE.md`. A creator who teaches business owners practical AI publishes three Reels a week and wants each raw idea turned into a filmable package.
 
 ### 1. Project Snapshot
 
@@ -28,7 +28,7 @@ This is the required level of specificity for every build. A creator who teaches
 | **Inputs needed each time** | Topic, audience, desired outcome, raw notes or a trend link, any sponsor constraints. |
 | **Human approval point** | Final claims, point of view, sponsorship language, on-camera delivery. |
 
-### 2. Project Instructions — paste this into Claude
+### 2. Project Instructions: paste this into Claude
 
 ```markdown
 ## Role and outcome
@@ -88,6 +88,8 @@ Confirm the piece has one clear promise, a usable action, natural language, and 
 5. Run the pressure test and improve the documents based on the failure.
 
 ### 5. Starter prompts
+
+Prompt 1 is always the pressure test: the standard run, the one they type first.
 
 ```markdown
 Turn this raw thought into a Reel package for business owners: [paste thought]. The goal is [goal].
